@@ -807,27 +807,69 @@
 
     /* ─── RESPONSIVE ─── */
     @media (max-width: 768px) {
-      nav { padding: 16px 20px; }
-      .nav-logo { font-size: 18px; }
-      .nav-cta { padding: 9px 18px; font-size: 13px; }
+      /* Nav */
+      nav { padding: 14px 16px; }
+      .nav-logo { font-size: 17px; }
+      .nav-cta { padding: 8px 16px; font-size: 12px; }
 
-      .sobre-grid { grid-template-columns: 1fr; gap: 40px; }
-      .sobre-card { order: -1; }
+      /* Hero */
+      #hero {
+        padding: 100px 20px 60px;
+        min-height: auto;
+      }
+      .hero-badge { font-size: 10px; padding: 5px 14px; margin-bottom: 16px; }
+      .hero-countries {
+        font-size: 11px;
+        gap: 6px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 16px;
+      }
+      .hero-headline { font-size: clamp(28px, 8vw, 40px); }
+      .hero-sub { font-size: 15px; margin-top: 16px; }
+      .hero-actions { margin-top: 28px; gap: 12px; }
+      .btn-primary, .btn-ghost { padding: 13px 24px; font-size: 14px; }
 
-      .servicos-grid { grid-template-columns: 1fr; }
-      .servico-card.featured { grid-column: span 1; }
-
-      .hero-metrics { gap: 24px; }
+      .hero-metrics {
+        margin-top: 40px;
+        gap: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+      }
       .metric-divider { display: none; }
+      .metric-num { font-size: clamp(22px, 6vw, 28px); }
+      .metric-label { font-size: 11px; }
 
-      .cta-border { inset: 20px; }
-      .btn-cta-main { padding: 18px 36px; font-size: 16px; }
+      /* Esconde scroll-hint no mobile — conteúdo já é longo */
+      .scroll-hint { display: none; }
 
-      .sobre-stat-row { gap: 12px; }
+      /* Sobre */
+      #sobre { padding: 72px 20px; }
+      .sobre-grid { grid-template-columns: 1fr; gap: 32px; }
+      .sobre-card { order: -1; padding: 28px 24px; }
+      .sobre-card-icon { font-size: 36px; margin-bottom: 12px; }
+      .sobre-stat-row { gap: 8px; }
+      .sobre-stat-n { font-size: 24px; }
+
+      /* Serviços */
+      #servicos { padding: 72px 20px; }
+      .servicos-grid { grid-template-columns: 1fr; gap: 16px; }
+      .servico-card { padding: 28px 22px; }
+      .servico-card.featured { grid-column: span 1; }
+      .servico-card.featured::after { font-size: 9px; padding: 3px 8px; }
+      .servicos-header { margin-bottom: 48px; }
+
+      /* CTA */
+      #cta { padding: 72px 16px 80px; }
+      .cta-border { display: none; }
+      .cta-form-wrap { padding: 4px; border-radius: 16px; }
+      .btn-cta-main { padding: 16px 28px; font-size: 15px; }
     }
 
     @media (min-width: 769px) and (max-width: 1024px) {
       .servicos-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-metrics { gap: 28px; }
     }
   </style>
 </head>
